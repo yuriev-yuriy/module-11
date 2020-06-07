@@ -1,0 +1,90 @@
+.main {
+  padding-top: 54px;
+  padding-bottom: 82px;
+}
+
+.section-title span {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  line-height: 28px;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.section-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--font-color);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--third-font-color);
+  margin: 40px auto 66px;
+}
+
+.section__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.section__item {
+  flex-basis: 374px;
+  text-align: left;
+  position: relative;
+}
+
+.section__icon {
+  background-repeat: no-repeat;
+}
+
+.section__icon--alarm {
+  background-image: url(../images/icons/alarm.svg);
+}
+
+.section__icon--line {
+  background-image: url(../images/icons/line.svg);
+}
+
+.section__icon--comp {
+  background-image: url(../images/icons/comp.svg);
+}
+
+.section__icon--book {
+  background-image: url(../images/icons/book.svg);
+}
+
+.section__icon--home {
+  background-image: url(../images/icons/home.svg);
+}
+
+.section__icon--image {
+  background-image: url(../images/icons/image.svg);
+}
+
+.section__text {
+  padding-left: 80px;
+}
+
+.section__subtitle {
+  line-height: 16px;
+  color: var(--font-color);
+  text-transform: uppercase;
+  padding-bottom: 14px;
+  margin: 0;
+}
+
+.section__desc {
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--second-font-color);
+  margin: 0;
+}
