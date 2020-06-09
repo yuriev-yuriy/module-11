@@ -4,13 +4,13 @@
 
 @import 'normalize.scss';
 @import './helpers/fonts.scss';
-@import './helpers/variables';
+@import './helpers/variables.scss';
 @import 'base.scss';
 
 @import './components/container.scss';
-@import './components/section';
+@import './components/section.scss';
 
-@import './sections/header';
-@import './sections/services';
-@import './sections/team';
+@import './sections/header.scss';
+@import './sections/services.scss';
+@import './sections/team.scss';
 @import './sections/footer.scss';
