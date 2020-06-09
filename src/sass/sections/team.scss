@@ -9,6 +9,27 @@
 .team-list {
   display: flex;
   justify-content: space-between;
+
+
+  &__pic {
+    transition: transform 0.2s linear;
+  }
+
+  &__item--overlay:hover {
+    .social--overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .team-list__pic {
+      transform: translate(-10px, -10px);
+    }
+  }
+
+  &__item--overlay {
+    position: relative;
+    margin: 0 0 30px;
+  }
 }
 
 .social--overlay {
@@ -26,23 +47,6 @@
   transition: opacity 0.2s linear;
 }
 
-.team-list__item--overlay:hover .social--overlay {
-  visibility: visible;
-  opacity: 1;
-}
-
-.team-list__pic {
-  transition: transform 0.2s linear;
-}
-
-.team-list__item--overlay:hover .team-list__pic {
-  transform: translate(-10px, -10px);
-}
-
-.team-list__item--overlay {
-  position: relative;
-  margin: 0 0 30px;
-}
 
 .social-list {
   display: block;
@@ -50,72 +54,67 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
-}
 
-.social-list__link {
-  width: 56px;
-  height: 56px;
-  border: none;
-  display: block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgb(252, 227, 138);
-  cursor: pointer;
-}
+  &__link {
+    width: 56px;
+    height: 56px;
+    border: none;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(252, 227, 138);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.social-list__item:not(:last-child) {
-  border-right: 1px solid rgba(243, 129, 129, 0.5);
-}
+    &:hover {
+      background-color: #f38181;
 
-.social-list__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      & .social-list__icon {
+        fill: #fff;
+      }
+    }
+  }
 
-.social-list__icon {
-  fill: #f38181;
-}
+  &__item:not(:last-child) {
+    border-right: 1px solid rgba(243, 129, 129, 0.5);
+  }
 
-.social-list__link:hover .social-list__icon {
-  fill: #fff;
-}
+  &__icon {
+    fill: #f38181;
 
-.social-list__link:hover {
-  background-color: #f38181;
-}
+    &--facebook {
+      width: 13px;
+      height: 26px;
+    }
 
-.social-list__icon--facebook {
-  width: 13px;
-  height: 26px;
-}
+    &--twitter {
+      width: 26px;
+      height: 22px;
+    }
 
-.social-list__icon--twitter {
-  width: 26px;
-  height: 22px;
-}
+    &--pinterest {
+      width: 21px;
+      height: 26px;
+    }
 
-.social-list__icon--pinterest {
-  width: 21px;
-  height: 26px;
-}
-
-.social-list__icon--instagram {
-  width: 26px;
-  height: 26px;
+    &--instagram {
+      width: 26px;
+      height: 26px;
+    }
+  }
 }
 
 .team-name {
-  font-family: var(--second-font);
+  font-family: $second-font;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  color: var(--main-font-color);
+  color: $main-font-color;
   text-transform: uppercase;
   margin: 0 0 14px;
   padding: 0;
